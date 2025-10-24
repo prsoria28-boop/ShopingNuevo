@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WiFi Shop</title>
+<link rel="stylesheet" href="info-style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Fondo suave -->
+<div class="background"></div>
+
+<main class="container">
+
+  <!-- Encabezado -->
+  <header class="header">
+    <img src="logo.png" alt="Logo WiFi Shop" class="logo">
+    <h1>WiFi Shop</h1>
+    <p class="tagline">Tu refugio urbano en la terminal</p>
+  </header>
+
+  <!-- Descripción -->
+  <section class="description">
+    <p><strong>ES:</strong> En WiFi Shop encuentras lo que necesitas: comida rápida, café, licuados, recargas, aseo personal e internet de alta velocidad.</p>
+    <p><strong>EN:</strong> At WiFi Shop you’ll find what you need: fast food, coffee, smoothies, mobile top-ups, personal care, and high-speed internet.</p>
+  </section>
+
+  <!-- Servicios -->
+  <section class="services">
+
+    <div class="service">
+      <img src="aseo.png" alt="Aseo Personal">
+      <h3>🧼 Aseo Personal</h3>
+      <p>Todo para mantenerte fresco y limpio durante el viaje.</p>
+    </div>
+
+    <div class="service">
+      <img src="tortas.png" alt="Tortas y Sándwiches">
+      <h3>🥪 Tortas & Sándwiches</h3>
+      <ul>
+        <li>🥣 Sopas Maruchan</li>
+        <li>🧀 Sincronizadas</li>
+      </ul>
+    </div>
+
+    <div class="service">
+      <img src="cafe.png" alt="Café">
+      <h3>☕ Café</h3>
+      <p>Disfruta un delicioso café recién preparado.</p>
+    </div>
+
+    <div class="service">
+      <img src="licuado.png" alt="Licuados">
+      <h3>🧃 Licuados</h3>
+      <p>Refrescantes, nutritivos y al momento.</p>
+    </div>
+
+    <div class="service">
+      <img src="recarga.png" alt="Recargas">
+      <h3>📲 Recargas</h3>
+      <p>Telcel, Movistar, AT&T, Unefon, Bait y más.</p>
+    </div>
+
+    <div class="service">
+      <img src="internet.png" alt="Internet WiFi">
+      <h3>🌐 Internet</h3>
+      <p>Conéctate rápido y seguro desde cualquier dispositivo.</p>
+    </div>
+
+  </section>
+
+  <!-- Tarifas -->
+  <section class="pricing">
+    <h2>💻 Tarifas de Internet</h2>
+    <ul>
+      <li>30 minutos — <strong>$5.00</strong></li>
+      <li>1 hora — <strong>$10.00</strong></li>
+      <li>Día — <strong>$30.00</strong></li>
+      <li>Semana — <strong>$85.00</strong></li>
+      <li>Mes — <strong>$190.00</strong></li>
+    </ul>
+  </section>
+
+  <!-- Horario -->
+  <section class="hours">
+    <h2>🕘 Horario</h2>
+    <p>9:00 AM – 6:00 PM</p>
+  </section>
+
+  <!-- Pie -->
+  <footer>
+    <p>Gracias por visitar <strong>WiFi Shop</strong> · Thank you for your visit</p>
+  </footer>
+
+</main>
+
+<!-- Modal -->
+<div class="modal" id="trialModal">
+  <div class="modal-content">
+    <h3>⏳ Tiempo gratuito por terminar</h3>
+    <p>Visítanos en <strong>WiFi Shop</strong> para adquirir acceso completo.<br>Your free time is almost up — visit WiFi Shop to purchase full access.</p>
+    <button class="modal-button" onclick="closeModal()">Entendido / OK</button>
+  </div>
+</div>
+
+<script>
+const modal = document.getElementById("trialModal");
+function closeModal(){ modal.style.display="none"; }
+setTimeout(()=>{ modal.style.display="flex"; }, 240000);
+</script>
+
+</body>
+</html>
