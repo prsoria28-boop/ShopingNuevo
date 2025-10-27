@@ -9,77 +9,52 @@
 </head>
 <body>
 
-<!-- Fondo suave -->
+<!-- Fondo -->
 <div class="background"></div>
 
+<!-- Contenedor principal -->
 <main class="container">
 
-  <!-- Encabezado -->
+  <!-- Header -->
   <header class="header">
     <img src="logo.png" alt="Logo WiFi Shop" class="logo">
-    <h1 class="title-glow">WiFi Shop</h1>
-    <p class="tagline">Tu refugio urbano en la terminal</p>
+    <h1 class="title">WiFi Shop</h1>
+    <p class="tagline">Tu refugio urbano en la terminal · <span>Your urban refuge in the terminal</span></p>
   </header>
 
   <!-- Descripción -->
   <section class="description">
-    <p><strong>ES:</strong> En WiFi Shop encuentras lo que necesitas: comida rápida, café, licuados, recargas, aseo personal e internet de alta velocidad.</p>
-    <p><strong>EN:</strong> At WiFi Shop you’ll find what you need: fast food, coffee, smoothies, mobile top-ups, personal care, and high-speed internet.</p>
+    <p><strong>ES:</strong> En nuestra tienda puedes encontrar de todo: aseo personal, tortas, sincronizadas, sopa maruchan, café, licuados, recargas, ¡y por supuesto, internet WiFi!</p>
+    <p><strong>EN:</strong> In our store you’ll find everything: personal care, sandwiches, coffee, smoothies, mobile top-ups, and of course, WiFi internet! All at your fingertips.</p>
   </section>
 
   <!-- Servicios -->
   <section class="services">
+    <div class="service"><img src="aseo.png" alt=""><p>🧼 Aseo Personal<br><span>Personal Care</span></p></div>
 
     <div class="service">
-      <img src="aseo.png" alt="Aseo Personal">
-      <h3>🧼 Aseo Personal</h3>
-      <p>Todo para mantenerte fresco y limpio durante el viaje.</p>
+      <img src="tortas.png" alt="">
+      <p>🥪 Tortas, Sandwiches<br>🍜 Sopa Maruchan<br>🥙 Sincronizadas<br><span>Snacks & Sandwiches</span></p>
     </div>
 
-    <div class="service">
-      <img src="tortas.png" alt="Tortas y Sándwiches">
-      <h3>🥪 Tortas & Sándwiches</h3>
-      <ul>
-        <li>🥣 Sopas Maruchan</li>
-        <li>🧀 Sincronizadas</li>
-      </ul>
-    </div>
+    <div class="service"><img src="cafe.png" alt=""><p>☕ Café<br><span>Coffee</span></p></div>
 
-    <div class="service">
-      <img src="cafe.png" alt="Café">
-      <h3>☕ Café</h3>
-      <p>Disfruta un delicioso café recién preparado.</p>
-    </div>
+    <div class="service"><img src="licuado.png" alt=""><p>🥤 Licuados<br><span>Smoothies</span></p></div>
 
-    <div class="service">
-      <img src="licuado.png" alt="Licuados">
-      <h3>🧃 Licuados</h3>
-      <p>Refrescantes, nutritivos y al momento.</p>
-    </div>
+    <div class="service"><img src="recarga.png" alt=""><p>📲 Recargas<br><span>Top-ups</span></p></div>
 
-    <div class="service">
-      <img src="recarga.png" alt="Recargas">
-      <h3>📲 Recargas</h3>
-      <p>Telcel, Movistar, AT&T, Unefon, Bait y más.</p>
-    </div>
-
-    <div class="service">
-      <img src="internet.png" alt="Internet WiFi">
-      <h3>🌐 Internet</h3>
-      <p>Conéctate rápido y seguro desde cualquier dispositivo.</p>
-    </div>
-
+    <div class="service"><img src="internet.png" alt=""><p>🌐 Internet<br><span>WiFi</span></p></div>
   </section>
 
   <!-- Tarifas -->
   <section class="pricing">
-    <h2 class="title-glow">💻 Tarifas de Internet</h2>
+    <h2 class="glow-text">💻 Tarifas de Internet</h2>
     <ul>
-      <li>30 minutos — <strong>$5.00</strong></li>
-      <li>1 hora — <strong>$10.00</strong></li>
-      <li>Día — <strong>$30.00</strong></li>
-      <li>Semana — <strong>$85.00</strong></li>
-      <li>Mes — <strong>$190.00</strong></li>
+      <li>30 minutos / 30 minutes — <strong>$5.00</strong></li>
+      <li>1 hora / 1 hour — <strong>$10.00</strong></li>
+      <li>Día / Day — <strong>$30.00</strong></li>
+      <li>Semana / Week — <strong>$85.00</strong></li>
+      <li>Mes / Month — <strong>$190.00</strong></li>
     </ul>
   </section>
 
@@ -89,26 +64,22 @@
     <p>9:00 AM – 6:00 PM</p>
   </section>
 
-  <!-- Pie -->
+  <!-- Footer -->
   <footer>
-    <p>Gracias por visitar <strong>WiFi Shop</strong> · Thank you for your visit</p>
+    <p>Gracias por apoyar a <strong>WiFi Shop</strong><br><span>Thank you for supporting WiFi Shop</span></p>
   </footer>
 
 </main>
 
-<!-- Modal -->
-<div class="modal" id="trialModal">
-  <div class="modal-content">
-    <h3>⏳ Tiempo gratuito por terminar</h3>
-    <p>Visítanos en <strong>WiFi Shop</strong> para adquirir acceso completo.<br>Your free time is almost up — visit WiFi Shop to purchase full access.</p>
-    <button class="modal-button" onclick="closeModal()">Entendido / OK</button>
-  </div>
-</div>
-
+<!-- Script de animaciones -->
 <script>
-const modal = document.getElementById("trialModal");
-function closeModal(){ modal.style.display="none"; }
-setTimeout(()=>{ modal.style.display="flex"; }, 240000);
+const revealElements = document.querySelectorAll('.description, .services, .pricing, .hours');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, {threshold:0.2});
+revealElements.forEach(el => observer.observe(el));
 </script>
 
 </body>
