@@ -4,7 +4,7 @@ body, html {
   padding: 0;
   font-family: "Poppins", sans-serif;
   color: #222;
-  background: url("fondo-dia.jpg") no-repeat center center fixed;
+  background: url("fondo-dia.png") no-repeat center center fixed;
   background-size: cover;
   overflow-x: hidden;
 }
